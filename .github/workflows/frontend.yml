@@ -35,6 +35,7 @@ jobs:
           tags: |
             hauntedhunteer/zadanie2:v1
   qemu:
+    name: Budowa i publikacja obrazow na repozytorium
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -66,7 +67,7 @@ jobs:
         with:
           context: ./
           file: ./dockerfile.v1
-          platforms: linux/amd64,linux/390x,linux/arm64/v8
+          platforms: linux/amd64,linux/390x,linux/arm/v6
           push: true
           tags: |
             hauntedhunteer/zadanie2:v2
